@@ -1,0 +1,132 @@
+body {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.game-container {
+  width: 80vw;
+  position: relative;
+  margin: 2rem auto;
+  background-color: #435058;
+  padding: 2rem; }
+
+.cards-container {
+  max-width: 40rem;
+  min-height: 30rem;
+  margin: auto;
+  background-color: #435058;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 7rem);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center; }
+
+.card-body {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.08);
+  background-color: #8ea604;
+  perspective: 40rem;
+  transform-style: preserve-3d;
+  transition: 0.7s transform; }
+  .card-body__card-front, .card-body__card-back {
+    backface-visibility: hidden; }
+  .card-body__card-front {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .card-body__card-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotateY(-180deg);
+    background-color: #f5bb00;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .card-body__card-back i {
+      color: #bf3100; }
+
+.card-body.clicked {
+  transform: rotateY(-180deg); }
+
+.score-box {
+  width: 50vw;
+  margin: 1rem auto;
+  transform: translateY(-50%);
+  background-color: #8ea604;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+  .score-box__reset {
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #f5bb00;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease-in; }
+    .score-box__reset:active {
+      transform: scale(0.95); }
+
+.win-modal.show-modal {
+  top: 30%;
+  left: 33%;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in; }
+
+.win-modal {
+  height: 40vh;
+  width: 35vw;
+  background-color: #f5bb00;
+  color: #435058;
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  transform: translateY(-100%);
+  opacity: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .win-modal__heading {
+    width: 100%;
+    height: 3rem;
+    background-color: #bf3100;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem; }
+  .win-modal__message {
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .win-modal__message p {
+      margin-bottom: 0; }
+  .win-modal button {
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    background-color: #bf3100;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.08);
+    color: #fff;
+    transition: all 0.2s ease-in;
+    margin-top: 1rem; }
+    .win-modal button:hover, .win-modal button:active {
+      transform: scale(0.97); }

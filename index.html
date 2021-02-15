@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2416873d95.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="win-modal">
+        <div class="win-modal__heading">
+          <h2>You Win!</h2>
+        </div>
+        <div class="win-modal__message">
+          <p>Time Elapsed: <span class="final-time-elapsed"></span></p>
+          <p>Number of Moves: <span class="num-moves"></span></p>
+          <p>Your Rating: <span class="rating"></span></p>
+        </div>
+        <button>Play Again</button>
+      </div>
+      <div class="score-box">
+        <button class="score-box__reset">Reset</button>
+        <h2 class="score-box__moves">
+          Moves: <span class="score-box__moves-counter"></span>
+        </h2>
+        <h2 class="score-box__timer">
+          Time: <span class="time-elapsed"></span>
+        </h2>
+      </div>
+      <div class="cards-container"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
